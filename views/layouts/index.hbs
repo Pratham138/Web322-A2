@@ -1,0 +1,69 @@
+<div
+  style="font-family: 'Arial', sans-serif; background-color: #f4f4f4;
+      margin: 0; padding: 0; display: flex; flex-direction: column; align-items:
+      center; justify-content: center; height: 100vh;"
+>
+  <div
+    style="width: 40rem;display: flex; justify-content: space-between; align-items: center; gap: 4rem;"
+  >
+    <h1
+      style="color: #333;
+      text-align: center;align-items: center;"
+    >Assignment Gallery</h1>
+    <a
+      href="/logout"
+      style="font-size: 1.5rem;"
+      id={{email}}
+      onmouseenter="this.textContent='Logout'"
+      onmouseleave="this.textContent=this.id"
+    >{{email}}</a>
+  </div>
+
+  <div
+    style="display: flex; align-items: center;
+      gap: 50px;"
+  >
+    <form
+      action="/"
+      method="post"
+      style="display: flex; flex-direction: column;"
+    >
+      {{#each imageNames}}
+
+        <label
+          for="{{this}}"
+          style="padding: 12px 5px; border: 1px solid #b1e0b3; border-radius: 3px;
+      margin-bottom: 8px; cursor: pointer;"
+        >
+          <input type="radio" name="image" value="{{this}}" id="{{this}}" />
+          {{this}}
+        </label>
+      {{/each}}
+
+      <button
+        type="submit"
+        style="background-color: #4caf50;
+      color: white; border: none; padding: 10px 20px; text-align: center;
+      text-decoration: none; display: inline-block; font-size: 16px; cursor:
+      pointer; border-radius: 5px; margin-top: 10px;"
+        onmouseenter="this.style.backgroundColor='#45a049'"
+        onmouseleave="this.style.backgroundColor='#4caf50'"
+      >Submit</button>
+    </form>
+
+    <div
+      style="border-radius: 6px;
+      border: 1px solid #4caf50; padding: 20px;"
+    >
+      <img
+        id="image"
+        src={{displayImage.image}}
+        alt={{displayImage.name}}
+        style="max-width: 100%; width:
+      500px; height: auto; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0,
+      0, 0.1);"
+      />
+      <h2 id="imageText" style="text-align: center;">{{displayImage.name}}</h2>
+    </div>
+  </div>
+</div>

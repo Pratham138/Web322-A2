@@ -1,0 +1,11 @@
+Desktop, desktop.jpeg
+Ipad, ipad.jpeg
+Iphone, iphone.jpg
+Ipod, ipod.webp
+Keyboard, keyboard.jpeg
+Laptop, laptop.jpeg
+Monitor, monitor.avif
+Mouse, mouse.jpeg
+UPS, ups.jpg
+Vision, vision.jpeg
+Watch, watch.gif

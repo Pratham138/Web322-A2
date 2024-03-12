@@ -1,0 +1,12 @@
+<form action="/gallery" method="post" id="gallery">
+  {{#each imageNames}}
+
+    <label for="{{this}}">
+      <input type="radio" name="image" value="{{this}}" id="{{this}}" />
+      {{this}}
+    </label>
+
+  {{/each}}
+
+  <button type="submit">Submit</button>
+</form>
